@@ -2,11 +2,13 @@ console.log('***** Music Collection *****')
 let collection = [];
 
 function addToCollection( title, yearPublished, artist ) {
-    collection.push(
-        title,
-        yearPublished,
-        artist
-    );
+    const album = {
+        title: title,
+        yearPublished: yearPublished,
+        artist: artist
+    }
+    collection.push (album);
+    return album;
 }
 
 
@@ -21,7 +23,7 @@ console.log(collection);
 
 function showCollection( title, yearPublished, artist ) {
     for(i = 0; i < collection.length; i++){
-        console.log((title), ' by ',(artist), ' published in ', (yearPublished));
+        console.log(`${collection[i].title}  by ${collection[i].artist}  published in ${collection[i].yearPublished}`);
     }
     console.log(collection.length);
     }
