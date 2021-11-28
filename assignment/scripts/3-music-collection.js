@@ -31,3 +31,18 @@ function showCollection( title, yearPublished, artist ) {
 showCollection('Between Us');
 showCollection(2016);
 showCollection('Nujabes');
+
+function findByArtist( artist ) {
+    let array = [];
+    for (var i = 0; i < collection.length; i++) {
+        if (collection[i].artist === artist) {
+            array.push (collection[i]);
+        }
+        else {
+
+        }
+    }
+    return array
+}
+
+console.log(findByArtist('Paradis'));
