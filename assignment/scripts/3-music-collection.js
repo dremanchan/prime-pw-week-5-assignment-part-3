@@ -21,12 +21,12 @@ addToCollection('Lucid', 2019, 'Raveena');
 
 console.log(collection);
 
-function showCollection( title, yearPublished, artist ) {
+function showCollection(array) {
+    console.log('number of items:', collection.length);
     for(i = 0; i < collection.length; i++){
         console.log(`${collection[i].title}  by ${collection[i].artist}  published in ${collection[i].yearPublished}`);
     }
-    console.log(collection.length);
-    }
+}
 
 showCollection('Between Us');
 showCollection(2016);
@@ -38,11 +38,7 @@ function findByArtist( artist ) {
         if (collection[i].artist === artist) {
             array.push (collection[i]);
         }
-        else {
-
-        }
-    }
-    return array
+    } return array;
 }
 
 console.log(findByArtist('Paradis'));
